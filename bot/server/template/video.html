@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,9 +19,9 @@
             margin: 0;
             justify-content: center;
             align-items: center;
-
+ 
         }
-
+ 
         .container {
             margin: auto;
             padding: 0px;
@@ -31,54 +31,54 @@
             align-items: flex-start;
             gap: 10px;
         }
-
+ 
         a {
             text-decoration: none;
         }
-
+ 
         .card {
             align-items: left;
             box-shadow: none;
             border-radius: 0%;
             max-width: 48%
         }
-
+ 
         .video-player {
             max-width: 48%;
             margin: auto;
             padding-bottom: 10px;
         }
-
+ 
         .plyr {
             border-radius: 5px;
         }
-
+ 
         ::-webkit-scrollbar {
             width: 5px;
         }
-
+ 
         ::-webkit-scrollbar-thumb {
             background: #888;
         }
-
+ 
         ::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
-
+ 
         @media (max-width: 992px) {
-
+ 
             .video-player {
                 max-width: 80%;
                 margin: auto;
             }
-
+ 
             .card {
                 align-items: left;
                 box-shadow: none;
                 border-radius: 0%;
                 max-width: 80%
             }
-
+ 
             .navbar {
                 padding-right: 15px;
                 padding-left: 15px;
@@ -86,7 +86,7 @@
         }
     </style>
 </head>
-
+ 
 <body>
     <nav class="navbar navbar-expand-lg bg-primary mb-3 p-1" data-bs-theme="dark">
         <div class="container-fluid">
@@ -100,9 +100,10 @@
                         Logout</button>
                 </form>
             </div>
-
+ 
         </div>
     </nav>
+<ins style="width: 300px;height:250px" data-width="300" data-height="250" class="yc84e70d6b1" data-domain="//r-q-e.com" data-affquery="/c61c23cae694978101aa/c84e70d6b1/?placementName=default"><script src="//r-q-e.com/js/responsive.js" async></script></ins>
     <div class="video-player">
         <video controls crossorigin playsinline data-poster="<!-- Poster -->" id="player">
             <source src="#" type="video/mp4" />
@@ -114,6 +115,7 @@
             <p class="card-text">Size: <!-- Size --></p>
         </div>
     </div>
+<ins style="width: 300px;height:250px" data-width="300" data-height="250" class="yc84e70d6b1" data-domain="//r-q-e.com" data-affquery="/c61c23cae694978101aa/c84e70d6b1/?placementName=default"><script src="//r-q-e.com/js/responsive.js" async></script></ins>
     <div class="container d-flex justify-content-center align-items-center" style="width: 100%; padding: 0 5px;">
         <div onclick="mx_player()" class="btn btn-primary">MX Player</div>
         <div onclick="vlc_player()" class="btn btn-primary">VLC Mobile</div>
@@ -144,9 +146,9 @@
     const idParam = new URLSearchParams(window.location.search).get('id');
     const hashParam = new URLSearchParams(window.location.search).get('hash');
     const encodedName = encodeURIComponent('<!-- Filename -->');
-
+ 
     const downloadlink = `${domainUrl}/${videoId}/${encodedName}?id=${idParam}&hash=${hashParam}`;
-
+ 
     const player = new Plyr('#player', {
         controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen', 'pip', 'airplay', 'settings', "play-large", 'duration'],
         hideControls: false,
@@ -158,7 +160,7 @@
         const openMx = `intent:${openDownloadLink}#Intent;package=com.mxtech.videoplayer.ad;end`;
         window.location.href = openMx;
     }
-
+ 
     function vlc_player() {
         const openDownloadLink = downloadlink;
         const openVlc = `vlc://${openDownloadLink}`;
@@ -202,5 +204,5 @@
         updateVideoSource();
     };
 </script>
-
+ 
 </html>
