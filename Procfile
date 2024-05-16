@@ -1,1 +1,1 @@
-web: bash surf-tg.sh
+web: python -m bot
