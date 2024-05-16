@@ -4,6 +4,7 @@ from bot.helper.exceptions import FIleNotFound
 from bot.helper.media import is_media
 from pyrogram import Client
 
+
 async def get_file_ids(client: Client, chat_id: int, message_id: int) -> Optional[FileId]:
     message = await client.get_messages(chat_id, message_id)
     if message.empty:
@@ -17,5 +18,3 @@ async def get_file_ids(client: Client, chat_id: int, message_id: int) -> Optiona
     setattr(file_id, 'mime_type', getattr(media, 'mime_type', ''))
     setattr(file_id, 'unique_id', file_unique_id)
     return file_id
-
-
